@@ -57,9 +57,13 @@ function todo_field_default_field_instances() {
   // Exported field_instance: 'node-task-field_priority'
   $field_instances['node-task-field_priority'] = array(
     'bundle' => 'task',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'High',
+      ),
+    ),
     'deleted' => 0,
-    'description' => 'Select a priority for this task',
+    'description' => 'Select a priority.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -95,7 +99,7 @@ function todo_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Priority');
-  t('Select a priority for this task');
+  t('Select a priority.');
 
   return $field_instances;
 }
